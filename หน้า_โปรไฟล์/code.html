@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Driver Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e02e24",
+            "background-light": "#f8f6f6",
+            "background-dark": "#211211",
+          },
+          fontFamily: {
+            "display": ["Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between bg-primary dark:bg-primary/90">
+<div class="flex size-12 shrink-0 items-center">
+<!-- This space is kept for layout consistency, can be used for a back button if needed -->
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">โปรไฟล์</h2>
+<div class="flex w-12 items-center justify-end">
+<!-- Kept for layout consistency, can be used for actions like settings -->
+</div>
+</div>
+<!-- Profile Header -->
+<div class="flex p-4 @container bg-primary dark:bg-primary/90">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-24 h-24 border-2 border-white/50" data-alt="Driver's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCl-eTnFCGlNiEXEiLiSO7O9EJbVBRKoXLGvT4U96BWqWXRlG0smYZ8-hT1en5lyi348Oyj6Abavqjm0Hz59gvNA0EoqZhjo5X5pnYNJin0t7c0zm3aFA2suJ_LrNTWgLGDXFXofrcdtAqvRyxw7rIu4PxwURCpnp1LqkAxiw2nqHPURfM2HxlsBK45o8Hkrp1h_fonLEltq4_vgmD5es51AoGh2RgtLA_32qo72WR96ZTTiMGOzVz-Xl8SDqqb9aEdNhjYbduIzQs");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">สมชาย ใจดี</p>
+<p class="text-white/80 text-base font-normal leading-normal text-center">รหัสสมาชิก: 123456</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-grow p-4 space-y-6">
+<!-- Contact Information Section -->
+<div>
+<h3 class="text-zinc-800 dark:text-zinc-200 text-lg font-bold leading-tight tracking-[-0.015em] px-0 pb-2 pt-2">ข้อมูลติดต่อ</h3>
+<div class="bg-white dark:bg-zinc-800/50 rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center gap-4 px-4 min-h-14">
+<div class="text-primary dark:text-primary/90 flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">call</span>
+</div>
+<p class="text-zinc-800 dark:text-zinc-200 text-base font-normal leading-normal flex-1 truncate">081-234-5678</p>
+</div>
+<hr class="border-zinc-200 dark:border-zinc-700 ml-16"/>
+<div class="flex items-center gap-4 px-4 min-h-14">
+<div class="text-primary dark:text-primary/90 flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<p class="text-zinc-800 dark:text-zinc-200 text-base font-normal leading-normal flex-1 truncate">somchai.dee@example.com</p>
+</div>
+<hr class="border-zinc-200 dark:border-zinc-700 ml-16"/>
+<div class="flex items-center gap-4 px-4 min-h-14">
+<div class="text-primary dark:text-primary/90 flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<p class="text-zinc-800 dark:text-zinc-200 text-base font-normal leading-normal flex-1 truncate">Line ID: somchai_d</p>
+</div>
+</div>
+</div>
+<!-- Settings Section -->
+<div>
+<h3 class="text-zinc-800 dark:text-zinc-200 text-lg font-bold leading-tight tracking-[-0.015em] px-0 pb-2 pt-2">การตั้งค่า</h3>
+<div class="bg-white dark:bg-zinc-800/50 rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800">
+<div class="flex items-center gap-4">
+<div class="text-zinc-600 dark:text-zinc-300 flex items-center justify-center shrink-0 size-10">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<p class="text-zinc-800 dark:text-zinc-200 text-base font-normal leading-normal flex-1">แก้ไขข้อมูลส่วนตัว</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-zinc-400 dark:text-zinc-500">chevron_right</span>
+</div>
+</div>
+<hr class="border-zinc-200 dark:border-zinc-700 ml-16"/>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800">
+<div class="flex items-center gap-4">
+<div class="text-zinc-600 dark:text-zinc-300 flex items-center justify-center shrink-0 size-10">
+<span class="material-symbols-outlined">lock_reset</span>
+</div>
+<p class="text-zinc-800 dark:text-zinc-200 text-base font-normal leading-normal flex-1">เปลี่ยนรหัสผ่าน</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-zinc-400 dark:text-zinc-500">chevron_right</span>
+</div>
+</div>
+<hr class="border-zinc-200 dark:border-zinc-700 ml-16"/>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800">
+<div class="flex items-center gap-4">
+<div class="text-zinc-600 dark:text-zinc-300 flex items-center justify-center shrink-0 size-10">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<p class="text-zinc-800 dark:text-zinc-200 text-base font-normal leading-normal flex-1">ตั้งค่าแอปพลิเคชัน</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-zinc-400 dark:text-zinc-500">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Logout Button -->
+<div class="bg-white dark:bg-zinc-800/50 rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center shrink-0 size-10">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<p class="text-primary text-base font-bold leading-normal flex-1">ออกจากระบบ</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="sticky bottom-0 mt-auto flex h-16 w-full items-center justify-around border-t border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-700 dark:bg-zinc-900/80">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="text-xs">รับงาน</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-xs">ประวัติ</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-xs">การเงิน</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-zinc-500 dark:text-zinc-400" href="#">
+<span class="material-symbols-outlined">celebration</span>
+<span class="text-xs">กิจกรรม</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary dark:text-primary/90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-bold">โปรไฟล์</span>
+</a>
+</div>
+</div>
+</body></html>

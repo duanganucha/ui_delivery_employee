@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Delivery Truck Service Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Sarabun:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#C8463C",
+            "background-light": "#F5F5F5",
+            "background-dark": "#1a1a1a",
+            "accent": "#A8D5BA"
+          },
+          fontFamily: {
+            "display": ["Sarabun", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-full min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark">
+<!-- Header Bar -->
+<header class="sticky top-0 z-10 flex h-16 items-center justify-between bg-primary px-4 shadow-md">
+<h1 class="text-xl font-bold text-white">TruckService</h1>
+<button class="relative text-white">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-xs font-bold text-gray-800">2</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto p-4">
+<!-- ProfileHeader -->
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24 border-4 border-white dark:border-gray-700 shadow-lg" data-alt="Driver's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcmSWiTAM-8XhFczDzD6dc57MAxIBqd4teXwaTs42CYhSOE1aY3n-EhtUfBpIOwirIWkVGJX6k347Wqnc6mK_ppH_Pq1a60704SnZEiOs0XTUcXendsRebXq80HQxDVPByjFWhIaJhfMOEkpMnMjDuB2rO5taFYy1bPtdkN1l1Cd4G580qEgq2pK7ifLL_38fYZjMozd8EjWYSWAUoQmcBxb6lq13Z7PAz4GdM7R09dpQz3rm94EAJbO_cofx4whj9buBNMwPk7Pk");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-900 dark:text-gray-100 text-xl font-bold leading-tight">สมศักดิ์ ใจดี</p>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">ID: 123456789</p>
+<div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined text-yellow-500 fill">star</span>
+<p class="text-base font-bold leading-normal">4.8</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Action: ListItem Modified -->
+<div class="mt-6 flex items-center gap-4 rounded-lg bg-white dark:bg-gray-800 p-4 shadow-sm min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold flex-1 truncate">มารับงาน</p>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-200 dark:bg-gray-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-accent">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- TextGrid -->
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col items-center text-center">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">group_add</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-gray-100 text-base font-bold leading-tight">ชวนเพื่อน</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Invite Friends</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col items-center text-center">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-gray-100 text-base font-bold leading-tight">รายได้</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Income</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col items-center text-center">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">receipt_long</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-gray-100 text-base font-bold leading-tight">ภาษี</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Tax</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col items-center text-center">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">help_center</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-gray-100 text-base font-bold leading-tight">ศูนย์ช่วยเหลือ</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Help Center</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col items-center text-center">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-gray-100 text-base font-bold leading-tight">โบนัส</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Bonus</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<footer class="sticky bottom-0 z-10">
+<div class="flex justify-around border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-2 pb-2 pt-2 shadow-[0_-1px_3px_rgba(0,0,0,0.1)]">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="text-primary flex h-8 items-center justify-center">
+<span class="material-symbols-outlined fill">home</span>
+</div>
+<p class="text-primary text-xs font-bold leading-normal tracking-[0.015em]">รับงาน</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="text-gray-500 dark:text-gray-400 flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">history</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">ประวัติ</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="text-gray-500 dark:text-gray-400 flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">การเงิน</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="text-gray-500 dark:text-gray-400 flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">กิจกรรม</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500 dark:text-gray-400" href="#">
+<div class="text-gray-500 dark:text-gray-400 flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">โปรไฟล์</p>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

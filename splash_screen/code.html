@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Truck Application Splash Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Sarabun:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Sarabun', 'Be Vietnam Pro', sans-serif;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e02e24",
+            "background-light": "#f8f6f6",
+            "background-dark": "#211211",
+          },
+          fontFamily: {
+            "display": ["Sarabun", "Be Vietnam Pro"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-screen min-h-[600px] w-full flex-col group/design-root overflow-hidden font-display">
+<div class="absolute inset-0 z-0">
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 h-3/5 w-[150%] max-w-4xl rounded-t-full bg-[#A8D5BA]/30 dark:bg-[#A8D5BA]/10 blur-3xl"></div>
+</div>
+<div class="relative flex flex-col flex-grow items-center justify-center p-4">
+<div class="mb-6 flex h-40 w-40 items-center justify-center rounded-full bg-[#C8463C] shadow-lg">
+<span class="material-symbols-outlined text-8xl text-white" data-icon="local_shipping">local_shipping</span>
+</div>
+<h1 class="text-[#1b0f0e] dark:text-[#f8f6f6] tracking-tight text-[32px] font-bold leading-tight px-4 text-center pb-3">แอปพลิเคชันรถบรรทุก</h1>
+</div>
+<div class="w-full p-4 pb-8 sm:pb-12 mt-auto">
+<button class="flex w-full max-w-md mx-auto min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-[#C8463C] text-[#fbf9f8] text-lg font-bold leading-normal tracking-[0.015em] shadow-md transition-transform active:scale-95">
+<span class="truncate">กดเข้าแอปพลิเคชัน</span>
+</button>
+</div>
+</div>
+</body></html>

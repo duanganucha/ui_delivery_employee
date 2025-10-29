@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรี่ภาพแอพ - Delivery Employee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        select, input[type="file"] {
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-input-label {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .file-input-label:hover {
+            background: #5568d3;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 177.78%; /* 9:16 aspect ratio for mobile app screenshots */
+            background: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        .image-info {
+            padding: 15px;
+        }
+
+        .image-order {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .image-name {
+            color: #333;
+            font-size: 0.95em;
+            word-break: break-all;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .delete-btn:hover {
+            background: #ee2f40;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 15px;
+            color: #666;
+        }
+
+        .empty-state svg {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        /* Modal for full image view */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .control-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 แกลเลอรี่ภาพแอพ</h1>
+            <p class="subtitle">รวบรวมและเรียงภาพหน้าจอแอพพลิเคชัน</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="sortOrder">เรียงตาม:</label>
+                <select id="sortOrder" onchange="sortImages()">
+                    <option value="name-asc">ชื่อ (A-Z)</option>
+                    <option value="name-desc">ชื่อ (Z-A)</option>
+                    <option value="date-asc">วันที่เพิ่ม (เก่า-ใหม่)</option>
+                    <option value="date-desc">วันที่เพิ่ม (ใหม่-เก่า)</option>
+                </select>
+            </div>
+
+            <div class="file-input-wrapper">
+                <label class="file-input-label" for="imageUpload">
+                    + เพิ่มภาพ
+                </label>
+                <input type="file" id="imageUpload" accept="image/*" multiple onchange="handleImageUpload(event)">
+            </div>
+        </div>
+
+        <div id="gallery" class="gallery">
+            <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                <h3>ยังไม่มีภาพ</h3>
+                <p>คลิกปุ่ม "เพิ่มภาพ" เพื่ออัปโหลดภาพหน้าจอแอพ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for full image view -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        let images = [];
+
+        // Load images from localStorage on page load
+        window.onload = function() {
+            const savedImages = localStorage.getItem('appImages');
+            if (savedImages) {
+                images = JSON.parse(savedImages);
+                renderGallery();
+            }
+        };
+
+        function handleImageUpload(event) {
+            const files = event.target.files;
+
+            for (let file of files) {
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        images.push({
+                            id: Date.now() + Math.random(),
+                            name: file.name,
+                            data: e.target.result,
+                            date: new Date().toISOString()
+                        });
+                        saveImages();
+                        renderGallery();
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            // Reset input
+            event.target.value = '';
+        }
+
+        function saveImages() {
+            localStorage.setItem('appImages', JSON.stringify(images));
+        }
+
+        function sortImages() {
+            const sortOrder = document.getElementById('sortOrder').value;
+
+            switch(sortOrder) {
+                case 'name-asc':
+                    images.sort((a, b) => a.name.localeCompare(b.name, 'th'));
+                    break;
+                case 'name-desc':
+                    images.sort((a, b) => b.name.localeCompare(a.name, 'th'));
+                    break;
+                case 'date-asc':
+                    images.sort((a, b) => new Date(a.date) - new Date(b.date));
+                    break;
+                case 'date-desc':
+                    images.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    break;
+            }
+
+            renderGallery();
+        }
+
+        function deleteImage(id) {
+            if (confirm('คุณต้องการลบภาพนี้ใช่หรือไม่?')) {
+                images = images.filter(img => img.id !== id);
+                saveImages();
+                renderGallery();
+            }
+        }
+
+        function renderGallery() {
+            const gallery = document.getElementById('gallery');
+
+            if (images.length === 0) {
+                gallery.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        <h3>ยังไม่มีภาพ</h3>
+                        <p>คลิกปุ่ม "เพิ่มภาพ" เพื่ออัปโหลดภาพหน้าจอแอพ</p>
+                    </div>
+                `;
+                return;
+            }
+
+            gallery.innerHTML = images.map((img, index) => `
+                <div class="image-card">
+                    <button class="delete-btn" onclick="deleteImage(${img.id})" title="ลบภาพ">×</button>
+                    <div class="image-wrapper">
+                        <img src="${img.data}" alt="${img.name}" onclick="openModal('${img.data}')">
+                    </div>
+                    <div class="image-info">
+                        <span class="image-order">ลำดับที่ ${index + 1}</span>
+                        <div class="image-name">${img.name}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>หน้า รายได้</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C8463C",
+                        "background-light": "#F5F5F5",
+                        "background-dark": "#1a1a1a",
+                        "info-panel": "#A8D5BA",
+                        "text-primary-light": "#1f1f1f",
+                        "text-primary-dark": "#e0e0e0",
+                        "text-secondary-light": "#5f5f5f",
+                        "text-secondary-dark": "#a0a0a0",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "display": ["Sarabun", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-primary p-4 pb-3 justify-between shadow-md">
+<div class="flex size-10 shrink-0 items-center justify-start text-white">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h1 class="text-white text-xl font-bold leading-tight">รายได้</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 bg-transparent text-white p-0">
+<span class="material-symbols-outlined text-3xl">notifications</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pb-24">
+<!-- Time Period Selector (SegmentedButtons) -->
+<div class="flex px-4 py-4 bg-background-light dark:bg-background-dark">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-gray-200 dark:bg-gray-700 p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-800 has-[:checked]:shadow-sm has-[:checked]:text-primary text-text-secondary-light dark:text-text-secondary-dark text-base font-bold transition-all duration-200">
+<span class="truncate">วันนี้</span>
+<input class="invisible w-0" name="period-selector" type="radio" value="วันนี้"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-800 has-[:checked]:shadow-sm has-[:checked]:text-primary text-text-secondary-light dark:text-text-secondary-dark text-base font-bold transition-all duration-200">
+<span class="truncate">สัปดาห์</span>
+<input checked="" class="invisible w-0" name="period-selector" type="radio" value="สัปดาห์"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-800 has-[:checked]:shadow-sm has-[:checked]:text-primary text-text-secondary-light dark:text-text-secondary-dark text-base font-bold transition-all duration-200">
+<span class="truncate">เดือน</span>
+<input class="invisible w-0" name="period-selector" type="radio" value="เดือน"/>
+</label>
+</div>
+</div>
+<!-- Summary Card -->
+<div class="px-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-info-panel/80 dark:bg-info-panel/20 p-5 shadow-sm">
+<p class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold">รายรับรวม</p>
+<p class="text-primary text-4xl font-bold tracking-tighter mt-1">฿12,500.00</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base font-medium mt-1">จาก 15 งาน | 320 กม.</p>
+</div>
+</div>
+<!-- Bar Chart -->
+<div class="flex flex-wrap gap-4 px-4 py-6 mt-2">
+<div class="flex w-full flex-1 flex-col gap-2 rounded-xl bg-card-light dark:bg-card-dark p-5 shadow-sm">
+<p class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold">ภาพรวมรายได้</p>
+<div class="flex items-end gap-1">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base">สัปดาห์นี้</p>
+<p class="text-green-600 dark:text-green-400 text-base font-medium">+5.2%</p>
+</div>
+<div class="grid min-h-[160px] grid-flow-col gap-4 grid-rows-[1fr_auto] items-end justify-items-center pt-4">
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-full transition-all duration-200 group-hover:bg-primary/40" style="height: 40%;"></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium pt-2">จ</p>
+</div>
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-full transition-all duration-200 group-hover:bg-primary/40" style="height: 10%;"></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium pt-2">อ</p>
+</div>
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-full transition-all duration-200 group-hover:bg-primary/40" style="height: 25%;"></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium pt-2">พ</p>
+</div>
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-full transition-all duration-200 group-hover:bg-primary/40" style="height: 50%;"></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium pt-2">พฤ</p>
+</div>
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-full transition-all duration-200 group-hover:bg-primary/40" style="height: 60%;"></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium pt-2">ศ</p>
+</div>
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary w-full rounded-t-full transition-all duration-200" style="height: 80%;"></div>
+<p class="text-primary text-sm font-bold pt-2">ส</p>
+</div>
+<div class="flex flex-col items-center w-full h-full justify-end group">
+<div class="bg-primary/20 dark:bg-primary/30 w-full rounded-t-full transition-all duration-200 group-hover:bg-primary/40" style="height: 70%;"></div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium pt-2">อา</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Transaction History -->
+<div class="flex items-center justify-between px-4 pb-3 pt-2">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold">ประวัติรายรับ</h2>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center p-2 rounded-full text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">calendar_month</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full text-text-secondary-light dark:text-text-secondary-dark hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Transaction List -->
+<div class="flex flex-col gap-3 px-4">
+<!-- List Item 1 -->
+<div class="flex cursor-pointer items-center justify-between gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<p class="font-bold text-text-primary-light dark:text-text-primary-dark">JOB-10255</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">15 พ.ค. 2567, 14:30 น.</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="font-bold text-lg text-green-600 dark:text-green-400">+ ฿850.00</p>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex cursor-pointer items-center justify-between gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<p class="font-bold text-text-primary-light dark:text-text-primary-dark">JOB-10254</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">15 พ.ค. 2567, 11:15 น.</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="font-bold text-lg text-green-600 dark:text-green-400">+ ฿1,200.00</p>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex cursor-pointer items-center justify-between gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<p class="font-bold text-text-primary-light dark:text-text-primary-dark">JOB-10252</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">14 พ.ค. 2567, 18:00 น.</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="font-bold text-lg text-green-600 dark:text-green-400">+ ฿950.00</p>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 flex h-20 justify-around border-t border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/80">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined text-3xl">add_box</span>
+<span class="text-xs font-medium">รับงาน</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined text-3xl">history</span>
+<span class="text-xs font-medium">ประวัติ</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined filled text-3xl">account_balance_wallet</span>
+<span class="text-xs font-bold">การเงิน</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined text-3xl">celebration</span>
+<span class="text-xs font-medium">กิจกรรม</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined text-3xl">person</span>
+<span class="text-xs font-medium">โปรไฟล์</span>
+</a>
+</nav>
+</div>
+</body></html>

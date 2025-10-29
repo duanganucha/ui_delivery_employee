@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Available Jobs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#C8463C",
+            "accent-blue": "#2F80ED",
+            "background-light": "#F5F5F5",
+            "background-dark": "#1F1F1F",
+            "card": "#A8D5BA",
+            "text-primary": "#333333",
+            "text-secondary": "#555555",
+            "dark-card": "#3A4F41",
+            "dark-text-primary": "#E0E0E0",
+            "dark-text-secondary": "#B0B0B0",
+          },
+          fontFamily: {
+            "display": ["Sarabun", "Prompt", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px",
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Sarabun', 'Prompt', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden pb-24">
+<div class="sticky top-0 z-10 flex items-center justify-between bg-background-light dark:bg-background-dark p-4 pb-2">
+<div class="flex size-12 shrink-0 items-center">
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-text-primary dark:text-dark-text-primary flex-1 text-center">หน้ารับงาน</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-text-primary dark:text-dark-text-primary gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-text-secondary dark:text-dark-text-secondary flex border-none bg-white dark:bg-gray-800 items-center justify-center pl-4 rounded-l-full border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-text-primary dark:text-dark-text-primary focus:outline-0 focus:ring-0 border-none bg-white dark:bg-gray-800 focus:border-none h-full placeholder:text-text-secondary dark:placeholder:text-dark-text-secondary px-4 pl-2 text-base font-normal leading-normal" placeholder="ค้นหางาน..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-4 p-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-card dark:bg-dark-card p-4 gap-3">
+<div class="flex justify-between items-start">
+<p class="text-lg font-bold leading-tight text-text-primary dark:text-dark-text-primary">อุดรธานี → ปทุมธานี</p>
+<p class="text-lg font-bold leading-tight text-primary dark:text-red-400">6,500 บาท</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary dark:text-dark-text-secondary text-lg">local_shipping</span>
+<p class="text-base font-normal leading-normal text-text-secondary dark:text-dark-text-secondary">ประเภทสินค้า: สินค้าเกษตร</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary dark:text-dark-text-secondary text-lg">calendar_month</span>
+<p class="text-base font-normal leading-normal text-text-secondary dark:text-dark-text-secondary">วันที่: 25 ต.ค. 67, 14:00 น.</p>
+</div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-accent-blue text-white text-base font-bold leading-normal">
+<span class="truncate">ต้องการรับ</span>
+</button>
+</div>
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-card dark:bg-dark-card p-4 gap-3">
+<div class="flex justify-between items-start">
+<p class="text-lg font-bold leading-tight text-text-primary dark:text-dark-text-primary">อุดรธานี → นครราชสีมา</p>
+<p class="text-lg font-bold leading-tight text-primary dark:text-red-400">4,200 บาท</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary dark:text-dark-text-secondary text-lg">local_shipping</span>
+<p class="text-base font-normal leading-normal text-text-secondary dark:text-dark-text-secondary">ประเภทสินค้า: วัสดุก่อสร้าง</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary dark:text-dark-text-secondary text-lg">calendar_month</span>
+<p class="text-base font-normal leading-normal text-text-secondary dark:text-dark-text-secondary">วันที่: 26 ต.ค. 67, 09:00 น.</p>
+</div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-accent-blue text-white text-base font-bold leading-normal">
+<span class="truncate">ต้องการรับ</span>
+</button>
+</div>
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-card dark:bg-dark-card p-4 gap-3">
+<div class="flex justify-between items-start">
+<p class="text-lg font-bold leading-tight text-text-primary dark:text-dark-text-primary">อุดรธานี → อุบลราชธานี</p>
+<p class="text-lg font-bold leading-tight text-primary dark:text-red-400">8,000 บาท</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary dark:text-dark-text-secondary text-lg">local_shipping</span>
+<p class="text-base font-normal leading-normal text-text-secondary dark:text-dark-text-secondary">ประเภทสินค้า: เครื่องจักร</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary dark:text-dark-text-secondary text-lg">calendar_month</span>
+<p class="text-base font-normal leading-normal text-text-secondary dark:text-dark-text-secondary">วันที่: 28 ต.ค. 67, 11:00 น.</p>
+</div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-accent-blue text-white text-base font-bold leading-normal">
+<span class="truncate">ต้องการรับ</span>
+</button>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 z-10 h-20 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+<div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+<button class="inline-flex flex-col items-center justify-center px-5 text-primary dark:text-red-400" type="button">
+<span class="material-symbols-outlined mb-1 text-2xl">work</span>
+<span class="text-sm">Jobs</span>
+</button>
+<button class="inline-flex flex-col items-center justify-center px-5 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-red-400" type="button">
+<span class="material-symbols-outlined mb-1 text-2xl">route</span>
+<span class="text-sm">My Trips</span>
+</button>
+<button class="inline-flex flex-col items-center justify-center px-5 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-red-400" type="button">
+<span class="material-symbols-outlined mb-1 text-2xl">account_balance_wallet</span>
+<span class="text-sm">Wallet</span>
+</button>
+<button class="inline-flex flex-col items-center justify-center px-5 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-red-400" type="button">
+<span class="material-symbols-outlined mb-1 text-2xl">person</span>
+<span class="text-sm">Profile</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

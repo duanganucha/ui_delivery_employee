@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Information</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C8463C",
+                        "secondary": "#A8D5BA",
+                        "background-light": "#F5F5F5",
+                        "background-dark": "#333333",
+                        "text-light": "#333333",
+                        "text-dark": "#F5F5F5",
+                        "text-muted-light": "#666666",
+                        "text-muted-dark": "#CCCCCC",
+                        "border-light": "#EEEEEE",
+                        "border-dark": "#444444"
+                    },
+                    fontFamily: {
+                        "display": ["Sarabun", "Prompt", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-primary p-4 shadow-md">
+<div class="text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h1 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">ข้อมูลสมาชิก</h1>
+</div>
+<div class="flex flex-col p-4 space-y-6">
+<!-- Profile Header -->
+<div class="flex p-4 @container bg-white dark:bg-gray-800 rounded-xl shadow-sm">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-secondary/50" data-alt="Abstract user avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDamXQgK5leR5Y6_odQZ09A4uoDcVP40YKKYL1_PxjWkKoTxbSFZXq4lHVUPTKdM6G04bvZyRFsovxazP2-wt9VnXdnLhNAonAZnSoxnmNnyqqXOMEGMuW9HRN3YCh0jNn9m7DYiryHKzt9JuJ7rAWPZizy-WGm5IJ33cqcUXf_1KzpxoFvNC77kwCmXXrDESM0JSwtgLzH1HCjm9K0hQq2mpYroTM_9V-2hXC-YIWwS2TR76fs4hL_QW93itv3TdxIcYNeXst3O5o");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-text-light dark:text-text-dark text-[28px] font-bold leading-tight tracking-[-0.015em] text-center">AB1234</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal text-center">Member ID</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Description List -->
+<div class="p-5 bg-white dark:bg-gray-800 rounded-xl shadow-sm">
+<div class="flex justify-between gap-x-6 py-3 border-b border-border-light dark:border-border-dark">
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">ชื่อ-นามสกุล</p>
+<p class="text-text-light dark:text-text-dark text-base font-bold leading-normal text-right">John Doe</p>
+</div>
+<div class="flex justify-between gap-x-6 py-3">
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">รหัสประจำตัวประชาชน</p>
+<p class="text-text-light dark:text-text-dark text-base font-bold leading-normal text-right">123-456-7890-123</p>
+</div>
+</div>
+<!-- Action Panel / Status -->
+<div class="p-4 @container">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-lg bg-secondary/30 dark:bg-secondary/20 p-5">
+<div class="flex flex-col gap-1 w-full text-center">
+<p class="text-[#204a32] dark:text-green-100 text-base font-bold leading-tight">Status</p>
+<p class="text-[#204a32] dark:text-green-100 text-base font-normal leading-normal">รอรับรหัสประจำตัวคนขับรับงานได้เลย</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Sarabun:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#e02e24",
+            "background-light": "#f8f6f6",
+            "background-dark": "#211211",
+            "app-primary": "#C8463C",
+            "app-accent": "#A8D5BA",
+            "app-background": "#F5F5F5",
+            "app-text-dark": "#333333",
+            "app-text-light": "#FFFFFF"
+          },
+          fontFamily: {
+            "display": ["Sarabun", "sans-serif"],
+            "vietnam": ["Be Vietnam Pro", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-app-background group/design-root dark:bg-background-dark pb-36">
+<div class="flex items-center bg-app-background dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-app-text-dark dark:text-app-text-light flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-app-text-dark dark:text-app-text-light text-lg font-bold leading-tight flex-1 text-center">รายละเอียดงาน</h2>
+<button class="text-app-text-dark dark:text-app-text-light flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+<div class="flex px-4 py-3">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl object-cover shadow-md" data-alt="A map showing a delivery route from a pickup to a destination point." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5IP5CWjM03aoxJJsmtmoHoSPiFUZy5wyuY4S9Ou5BaYpsWl18xTNPirVBHD_hqRm5gNf6b63IouWa5nbNeNAddSvrWs0DFIRZACaiv7E2M6L0QnaqWE57PKWeM3YUYWh7AfaFe11YqQPf0D60YSRIpN9JHZOeLbgDyrAzF0RdES0z1ACglmUivw8iKYnoKgxkSNkfxSEt7D_QKhDzASIvwSRORQ_wpIS0YcDsnygZWXd5L_QdTDEqUTqq1m7RezmU7GoEnjslQqw");'></div>
+</div>
+<div class="flex flex-wrap gap-4 px-4 py-2">
+<div class="flex min-w-[158px] flex-1 items-center gap-4 rounded-lg bg-white dark:bg-background-dark/50 p-4 border border-gray-200 dark:border-gray-700 shadow-sm">
+<div class="flex items-center justify-center size-10 bg-app-primary/10 rounded-full text-app-primary">
+<span class="material-symbols-outlined">distance</span>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">ระยะทาง</p>
+<p class="text-app-text-dark dark:text-app-text-light text-lg font-bold leading-tight">35 km</p>
+</div>
+</div>
+<div class="flex min-w-[158px] flex-1 items-center gap-4 rounded-lg bg-white dark:bg-background-dark/50 p-4 border border-gray-200 dark:border-gray-700 shadow-sm">
+<div class="flex items-center justify-center size-10 bg-app-primary/10 rounded-full text-app-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">เวลาเดินทาง</p>
+<p class="text-app-text-dark dark:text-app-text-light text-lg font-bold leading-tight">1 ชม. 15 นาที</p>
+</div>
+</div>
+</div>
+<div class="px-4 py-3">
+<div class="rounded-xl bg-app-accent/30 dark:bg-app-accent/20 p-4 space-y-3">
+<h3 class="text-app-text-dark dark:text-app-text-light text-base font-bold leading-tight">จุดรับของ</h3>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-app-text-dark dark:text-app-text-light mt-1">location_on</span>
+<div class="flex flex-col">
+<p class="text-app-text-dark dark:text-app-text-light text-base font-medium leading-normal">123/45 ถนนสุขุมวิท, แขวงคลองเตย, เขตคลองเตย, กรุงเทพมหานคร 10110</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-app-text-dark dark:text-app-text-light mt-1">call</span>
+<div class="flex-1 space-y-2">
+<p class="text-app-text-dark dark:text-app-text-light text-base font-medium leading-normal">คุณสมชาย (081-234-5678)</p>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-app-primary py-2.5 text-center text-sm font-bold text-white shadow">
+<span class="material-symbols-outlined text-xl">phone_in_talk</span>
+<span>โทรหาลูกค้า</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-1">
+<div class="rounded-xl bg-app-accent/30 dark:bg-app-accent/20 p-4 space-y-3">
+<h3 class="text-app-text-dark dark:text-app-text-light text-base font-bold leading-tight">จุดส่งของ</h3>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-app-primary">fmd_good</span>
+<div class="flex flex-col">
+<p class="text-app-text-dark dark:text-app-text-light text-base font-medium leading-normal">987/6 ซอยลาดพร้าว 101, แขวงคลองจั่น, เขตบางกะปิ, กรุงเทพมหานคร 10240</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-app-text-dark dark:text-app-text-light mt-1">call</span>
+<div class="flex-1 space-y-2">
+<p class="text-app-text-dark dark:text-app-text-light text-base font-medium leading-normal">คุณสมหญิง (089-876-5432)</p>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-app-primary py-2.5 text-center text-sm font-bold text-white shadow">
+<span class="material-symbols-outlined text-xl">phone_in_talk</span>
+<span>โทรหาลูกค้า</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 w-full bg-app-background dark:bg-background-dark">
+<div class="p-4 pt-2">
+<button class="w-full rounded-lg bg-app-primary py-3.5 text-center text-base font-bold text-white shadow-lg shadow-app-primary/30">ถัดไป</button>
+</div>
+<div class="flex justify-around border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark/80 py-2">
+<div class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs">Home</p>
+</div>
+<div class="flex flex-col items-center gap-1 text-app-primary">
+<span class="material-symbols-outlined">local_shipping</span>
+<p class="text-xs font-bold">Jobs</p>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">history</span>
+<p class="text-xs">History</p>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs">Account</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>
